@@ -1,4 +1,4 @@
-// paso 1 exportanos express con require
+// paso 1 exportamos express con require
 const express = require("express");
 
 //importamos
@@ -6,7 +6,7 @@ const {programacion} = require("../datos/cursos.js").infoCursos
 
 
 //router
-const routerProgramacion =express.router()
+const routerProgramacion = express.Router()
 
 
 //creacion de rutas
