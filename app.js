@@ -12,8 +12,11 @@ const {infoCursos} = require("./datos/cursos.js")
 
 //ROUTERS
 //con el metodo USE le decimos que  utilice dicha ruta
-const routerProgramacion = require("./routers/programacion.js")
-app.use('/api/cursos/programacion',routerProgramacion)
+const routerProgramacion = require("./routers/programacion.js");
+app.use('/api/cursos/programacion',routerProgramacion);
+
+const routerIdiomas = require("./routers/Idiomas.js");
+app.use('/api/cursos/idiomas',routerIdiomas);
 
 
 
