@@ -1,4 +1,4 @@
-# Cursos Desastre 🚀
+# ServidorTEAM 🚀
 
 Repositorio del proyecto de ejemplo para manejo de cursos de programación y matemáticas.
 
