@@ -4,8 +4,11 @@ const express = require("express");
 // creamos una app con express
 const app = express();
 
+ 
 // importamos los cursos con require y sintaxis de desestructuración
 const { infoCursos } = require("./datos/cursos.js");
+
+
 
 // -------------------- ROUTERS -------------------- //
 // con el método USE le decimos que utilice dicha ruta
@@ -17,6 +20,11 @@ app.use("/api/cursos/programacion", routerProgramacion);
 // Router de matemáticas
 const routerMatematicas = require("./routers/Matematicas.js");
 app.use("/api/cursos/matematicas", routerMatematicas);
+
+//Router de idiomas
+const routerIdiomas = require("./routers/Idiomas.js");
+app.use('/api/cursos/idiomas',routerIdiomas);
+
 
 // -------------------- RUTAS PRINCIPALES -------------------- //
 // get, es un verbo para solicitar o obtener un recurso específico.
