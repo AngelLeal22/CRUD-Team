@@ -1,4 +1,5 @@
-# ServidorTeam  🚀
+# ServidorTEAM 🚀
+>>>>>>> upstream/main
 
 Repositorio del proyecto de ejemplo para manejo de cursos de programación y matemáticas.
 
@@ -58,6 +59,6 @@ El servidor por defecto se ejecuta en http://localhost:3000.
 Autores
 Ing. Angel Leal
 Ing. Josue Chirivi
-
+Ing angelito
 Licencia
 Proyecto de ejemplo para fines educativos.
