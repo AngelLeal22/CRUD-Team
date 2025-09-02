@@ -12,6 +12,8 @@ const routerProgramacion = express.Router()
 // para poder procesar el cuerpo(body) de la solicitud en formato json
 routerProgramacion.use(express.json())
 
+
+
 //creacion de rutas
 
 routerProgramacion.get('/',(req, res) =>{

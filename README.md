@@ -1,5 +1,4 @@
 # ServidorTEAM 🚀
-
 Repositorio del proyecto de ejemplo para manejo de cursos de programación y matemáticas.
 
 ## Descripción
@@ -64,6 +63,7 @@ Autores
 Ing. Angel Leal
 Ing. Josue Chirivi
 Ing. Ángel Hernández
+
 
 Licencia
 Proyecto de ejemplo para fines educativos.
