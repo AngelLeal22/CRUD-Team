@@ -9,6 +9,8 @@ const {programacion} = require("../datos/cursos.js").infoCursos
 const routerProgramacion = express.Router()
 
 
+
+
 //creacion de rutas
 
 routerProgramacion.get('/',(req, res) =>{

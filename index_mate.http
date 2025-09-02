@@ -1,0 +1,46 @@
+
+
+
+###
+
+//POST - Crear un nuevo curso de matemáticas
+POST http://localhost:3000/api/cursos/matematicas
+Content-Type: application/json
+
+{
+  "id": 5,
+  "titulo": "Álgebra Avanzada",
+  "nivel": "intermedio",
+  "vistas": 0
+}
+###
+
+PUT http://localhost:3000/api/cursos/matematicas/3 
+Content-Type: application/json
+
+{
+      "id": 3,
+      "titulo": "Cálculo Básico con ayudas",
+      "tema": "calculo",
+      "vistas": 3700,
+      "nivel": "basico mas refuerzo"
+    }
+
+
+###
+PATCH http://localhost:3000/api/cursos/matematicas/4
+Content-Type: application/json
+
+{
+      
+      "titulo": "Cálculo Básico con ayudas y extras",
+      "tema": "calculo"
+      
+    }
+
+
+###
+
+//DELETE - Eliminar un curso de matemáticas por ID (ejemplo con ID = 2)
+DELETE http://localhost:3000/api/cursos/matematicas/2
+Content-Type: application/json

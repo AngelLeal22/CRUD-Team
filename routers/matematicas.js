@@ -7,6 +7,10 @@ const { matematicas } = require("../datos/cursos.js").infoCursos;
 // Paso 3: creamos el router
 const routerMatematicas = express.Router();
 
+
+routerMatematicas.use(express.json()); // Middleware para parsear JSON  
+
+
 // -------------------- Rutas -------------------- //
 
 // Obtener todos los cursos de matemáticas
@@ -59,6 +63,59 @@ routerMatematicas.get("/:tema/:nivel", (req, res) => {
 
   res.send(JSON.stringify(resultado));
 });
+
+// metodos http POST para agregar un nuevo curso
+routerMatematicas.post("/", (req, res) => {
+  const cursoNuevo = req.body;
+  matematicas.push(cursoNuevo);
+  res.send(JSON.stringify(matematicas));
+})
+
+routerMatematicas.put("/:id",(req,res) =>{
+    const cursoActualizado = req.body;
+    const id = req.params.id
+
+    const indice =matematicas.findIndex( curso=> curso.id == id)
+    if (indice >= 0) {
+        matematicas[indice] = cursoActualizado
+        
+    }
+    res.send(JSON.stringify(matematicas));
+})
+
+// PACTH para actualizaciones de un recursos o un objeto
+routerMatematicas.patch("/:id",(req,res) =>{
+    const infoActualizada = req.body;
+    const id = req.params.id  
+    const indice = matematicas.findIndex(curso => curso.id == id)
+    if (indice >= 0) {
+       const cursoAModificar= matematicas[indice]
+       //propiedad que permite modificar objetos
+       Object.assign(cursoAModificar,infoActualizada)
+        
+    }
+    res.send(JSON.stringify(matematicas));
+
+})
+
+
+
+// Método HTTP DELETE para eliminar un curso por id
+routerMatematicas.delete("/:id", (req, res) => {
+  const id = parseInt(req.params.id); // Convertir a número
+  const index = matematicas.findIndex(curso => curso.id === id);
+
+  if (index !== -1) {
+    matematicas.splice(index, 1); // Elimina el curso encontrado
+    res.json({
+      mensaje: `Curso con id ${id} eliminado correctamente`,
+      cursos: matematicas
+    });
+  } else {
+    res.status(404).json({ error: `Curso con id ${id} no encontrado` });
+  }
+});
+
 
 // Paso final: exportamos el router
 module.exports = routerMatematicas;
