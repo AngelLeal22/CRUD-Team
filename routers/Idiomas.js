@@ -7,6 +7,9 @@ const { idiomas } = require("../datos/cursos.js").infoCursos;
 //router
 const routerIdiomas = express.Router();
 
+
+routerIdiomas.use(express.json())
+
 //creamos las rutas
 
 routerIdiomas.get("/", (req, res) => {
@@ -49,6 +52,59 @@ routerIdiomas.get("/:idioma/:nivel", (req, res) => {
   }
   res.send(JSON.stringify(resultado));
 });
+
+//metodo POST (es un verbo para  crear un recurso especifico)
+
+routerIdiomas.post("/",(req,res) =>{
+    let cursoNuevo = req.body;
+    idiomas.push(cursoNuevo)
+    res.send(JSON.stringify(idiomas));
+
+})
+
+//metodo PUT ( verbo para modificar un recurso especifico)
+
+routerIdiomas.put("/:id",(req,res) =>{
+    const cursoActualizado = req.body;
+    const id = req.params.id
+
+    const indice =idiomas.findIndex( curso => curso.id == id)
+    if (indice >= 0) {
+        idiomas[indice] = cursoActualizado
+        
+    }
+    res.send(JSON.stringify(idiomas));
+})
+
+//metodo PATCH ( se refiere a la acción de aplicar modificaciones parciales a un recurso existente)
+routerIdiomas.patch("/:id",(req,res) =>{
+const infoActualizada = req.body
+const id = req.params.id
+//para buscar el indice que estamos buscando xd
+const indice =idiomas.findIndex( curso => curso.id == id)
+
+ if (indice >= 0) {
+       const cursoAModificar= idiomas[indice]
+       //propiedad que permite modificar objetos
+       Object.assign(cursoAModificar,infoActualizada)
+        
+    }
+    res.send(JSON.stringify(idiomas));
+
+})
+
+//metodo DELETE ( para eliminar)
+
+routerIdiomas.delete("/:id",(req,res) =>{
+    const id = req.params.id 
+    const indice =idiomas.findIndex( curso => curso.id == id)
+
+    if (indice >= 0) {
+        idiomas.splice(indice, 1)
+        
+    }
+    res.send(idiomas);
+})
 
 //exportamos el router
 module.exports = routerIdiomas;
