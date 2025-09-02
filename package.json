@@ -5,10 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
-<<<<<<<<< Temporary merge branch 1
-
-=========
->>>>>>>>> Temporary merge branch 2
   },
   "author": "angel leal, angel hernandez,josue chiviri",
   "license": "ISC",
