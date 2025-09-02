@@ -1,0 +1,41 @@
+POST HTTP://localhost:3000/api/cursos/programacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 5,
+    "titulo": "Aprende HTML y CSS",
+    "lenguaje": "HTML Y CSS",
+    "vistas": 15154,
+    "nivel": "basico"
+}
+
+###
+
+PUT HTTP://localhost:3000/api/cursos/programacion/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "titulo": "javascript intermedio con proyectos",
+    "lenguaje": "javascript",
+    "vistas": 15124,
+    "nivel": "intermedio"
+}
+
+###
+
+PATCH HTTP://localhost:3000/api/cursos/programacion/3 HTTP/1.1
+Content-Type: application/json
+
+
+{
+    
+  "titulo": "javascript intermedio con proyectos y extras",
+    "vistas": 15134
+   
+}
+
+
+###
+
+DELETE HTTP://localhost:3000/api/cursos/programacion/1 HTTP/1.1
