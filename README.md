@@ -62,8 +62,11 @@ El servidor por defecto se ejecuta en http://localhost:3000.
 Autores
 Ing. Angel Leal
 Ing. Josue Chirivi
+<<<<<<<<< Temporary merge branch 1
 Ing. Ángel Hernández
 
-
+=========
+Ing angelito
+>>>>>>>>> Temporary merge branch 2
 Licencia
 Proyecto de ejemplo para fines educativos.
