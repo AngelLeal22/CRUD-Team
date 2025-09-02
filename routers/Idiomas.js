@@ -7,7 +7,7 @@ const { idiomas } = require("../datos/cursos.js").infoCursos;
 //router
 const routerIdiomas = express.Router();
 
-
+// Procesa el body de la solicitud en formato json
 routerIdiomas.use(express.json())
 
 //creamos las rutas
