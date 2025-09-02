@@ -1,6 +1,4 @@
 # ServidorTEAM 🚀
->>>>>>> upstream/main
-
 Repositorio del proyecto de ejemplo para manejo de cursos de programación y matemáticas.
 
 ## Descripción
@@ -32,6 +30,11 @@ El servidor está estructurado usando **routers**, siguiendo buenas prácticas d
 - `/api/cursos/matematicas` → Lista todos los cursos de matemáticas.
 - `/api/cursos/matematicas/:nivel` → Filtra cursos de matemáticas por nivel.
 
+### Idiomas
+- `/api/cursos/idiomas` → Lista todos los cursos de idiomas.
+- `/api/cursos/idiomas/:idioma` → Filtra cursos por idioma.
+- `/api/cursos/idiomas/:idioma/:nivel` → Filtra cursos por idioma y nivel (basico y intermedio).
+
 ### General
 - `/api/cursos` → Lista todos los cursos (programación y matemáticas).
 - `/` → Mensaje de bienvenida al servidor.
@@ -59,6 +62,8 @@ El servidor por defecto se ejecuta en http://localhost:3000.
 Autores
 Ing. Angel Leal
 Ing. Josue Chirivi
-Ing angelito
+Ing. Ángel Hernández
+
+
 Licencia
 Proyecto de ejemplo para fines educativos.
